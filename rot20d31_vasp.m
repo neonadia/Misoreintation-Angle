@@ -12,8 +12,8 @@ end
 
 c = textscan(fid,'%.11f %.11f %.11f',num_of_atom);
 
-n = 12; %m and n are determined by twisted angle
-m = 11;
+n = 13; %m and n are determined by twisted angle
+m = 3;
 cos = (n^2+4*n*m+m^2)/(2*(n^2+n*m+m^2));
 sin = sqrt(1-cos^2);
 
@@ -25,7 +25,7 @@ rot_m = [cos -sin; sin cos];
 
 
 
-filename2 = 'afterrot2_vasp.xyz';
+filename2 = 'afterrot20d31_vasp.xyz';
 fid=fopen(filename2,'w');
 fprintf(fid,'14400\n')
 
